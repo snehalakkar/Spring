@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="clsa" class="com.bridgeLabz.ConstructorInjection.classA">
+		<constructor-arg name="id" value="1"></constructor-arg>
+		<constructor-arg name="name" value="Snehal Akkar"></constructor-arg>
+		<constructor-arg name="address" value="ojhar"></constructor-arg>
+	</bean>
+
+	<bean id="clsb" class="com.bridgeLabz.ConstructorInjection.ClassB">
+		<constructor-arg name="pencil" value="apsara"></constructor-arg>
+		<constructor-arg name="rubber" value="natraj"></constructor-arg>
+		<constructor-arg name="scale" value="hifi"></constructor-arg>
+		<constructor-arg>
+			<ref bean="clsa" />
+		</constructor-arg>
+	</bean>
+
+</beans>
