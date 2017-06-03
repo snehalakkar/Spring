@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="clsa" class="com.bridgeLabz.SetterInjection.classA">
+		 <property name="id" value="1"></property>
+		<property name="name" value="Snehal Akkar"></property>
+		<property name="address" value="ojhar"></property> 
+	</bean>
+
+	<bean id="clsb" class="com.bridgeLabz.SetterInjection.ClassB">
+		<property name="pencil" value="apsara"></property>
+		<property name="rubber" value="natraj"></property>
+		<property name="scale" value="hifi"></property>
+		<property name="a" ref="clsa"></property>
+	</bean>
+
+</beans>

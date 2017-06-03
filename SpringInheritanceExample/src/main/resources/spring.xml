@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="parentclass" class="com.bridgeLabz.SpringInheritanceExample.Company" abstract="true">
+		<property name="id" value="1" />
+		<property name="cname" value="bridgelabz" />
+
+	</bean>
+
+	<bean id="child" class="com.bridgeLabz.SpringInheritanceExample.Employee">
+		<property name="ename" value="snehal" />
+		<property name="sal" value="23000" />
+	</bean>
+
+	<bean id="obj" class="com.bridgeLabz.SpringInheritanceExample.Company"
+		parent="parentclass">
+		<property name="emp" ref="child"></property>
+	</bean>
+</beans>
